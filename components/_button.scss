@@ -7,8 +7,6 @@
     @include shadow_outset;
     background-color: $color;
     color: lighten($color: $color, $amount: 75%);
-    // background-color: lighten($color: v.$main_color_darkest, $amount: 65%);
-    // color: v.$main_color_darker;
     text-transform: uppercase;
     outline: none;
     border: none;
@@ -16,22 +14,25 @@
     padding: 0.8em 1em;
     border: 1px solid transparent;
     transition: v.$transition1;
+
     &:hover, &:focus {
-        opacity: 0.8;
+        background-color: darken($color: $color, $amount: 1%);
+        // opacity: 0.8;
     }
+
     &:active {
         opacity: 1;
-        // transform: scale(0.95);
         box-shadow: unset;
         border: 1px solid rgba(v.$main_color_dark, 20%);
     }
+    &:disabled {
+        opacity: 50%;
+        cursor: not-allowed;
+    }
 }
 
-button, input[type=submit], input[type=reset] {
+button, 
+input[type=submit], 
+input[type=reset] {
     @include buttons(v.$main_color);
-}
-
-input:disabled {
-    opacity: 50%;
-    cursor: not-allowed;
 }

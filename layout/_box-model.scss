@@ -1,5 +1,7 @@
 @use '../abstracts/variables' as v;
 
+
+// padding 
 @for $i from 1 through 20 {
     $value: 0.1 * $i;
     .p_#{$i} { padding: #{$value}rem }
@@ -19,7 +21,7 @@
     .my_#{$i} { margin: #{$value}rem 0 }
 }
 
-
+// border
 @for $i from 1 to 5 {
     .b {
         &_#{$i} {
