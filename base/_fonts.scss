@@ -3,6 +3,10 @@
 
 
 
+html {
+    font-family: 'Quicksand', sans-serif;
+}
+
 
 //colors
 h1,h2,h3,h4,h5,h6 {
@@ -10,7 +14,7 @@ h1,h2,h3,h4,h5,h6 {
     margin: 0.5rem 0;
 }
 p { color: v.$main_color_darker; }
-label { color: v.$main_color_darker; }
+label { color: v.$main_color_dark; }
 
 
 
@@ -22,9 +26,9 @@ h4 { font-size: map.get(v.$fontsizes, 'h4'); }
 h5 { font-size: map.get(v.$fontsizes, 'h5'); }
 h6 { font-size: map.get(v.$fontsizes, 'h6'); }
 
-p { font-size: map.get(v.$fontsizes, 'normal'); }
-a { font-size: map.get(v.$fontsizes, 'normal'); }
-label { font-size: map.get(v.$fontsizes, 'small'); }
+p { font-size: map.get(v.$fontsizes, 'p'); }
+a { font-size: map.get(v.$fontsizes, 'a'); }
+label { font-size: map.get(v.$fontsizes, 'label'); }
 
 // button, input[type=submit] {
 //     font-size: map.get(v.$fontsizes, 'ssmall');

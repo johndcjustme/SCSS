@@ -1,0 +1,146 @@
+@use 'sass:map';
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as *;
+
+// lists
+
+$hoverable_background:rgba(v.$main_color_darkest, 8%);
+$selectable_background:rgba(v.$main_color_darkest, 12%);
+
+.nostyle {
+    list-style: none;
+}
+
+ul {
+    line-height: 2em;
+    li {
+        @include all_components;
+        font-size: map.get(v.$fontsizes, 'normal'); 
+        color: v.$main_color_darker;
+        list-style-type: none;
+        padding: 0.3em 0;
+    }
+
+    &.hoverable {
+        li {
+            padding: 0.3em 0.4em;
+
+            &:hover {
+                background-color: $hoverable_background;
+                a {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &.selectable {
+        li {
+            width: 100%;
+            list-style-type: none;
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+            transition: v.$transition1;
+            padding: 0.3em 0.4em;
+
+            a {
+                position: absolute;
+                right: 0;
+                padding-right: 5px;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            &:hover {
+                background-color: $hoverable_background;
+
+                a {
+                    opacity: 1;
+                }
+            }
+
+            &:active {
+                background-color: $selectable_background;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+// table
+
+table {
+    border-collapse: collapse;
+    font-size: map.get(v.$fontsizes, 'normal');
+
+    tr {
+        position: relative;
+        transition: v.$transition1;
+    }
+
+    th, td {
+        padding: 0.8em 0.5em;
+        border-bottom: 1px solid rgba(v.$main_color_darkest, 10%);
+        // font-size: $font_s;
+    }
+
+    th {
+        @include all_components;
+        text-align: left;
+        color: v.$main_color_darker;
+        font-weight: bold;
+        font-size: map.get(v.$fontsizes, 'medium');
+    }
+
+    td {
+        color: v.$main_color_darker;
+        transition: 1s ease-in-out;
+        .action {
+            // font-size: $font_m;
+            opacity: 0;
+        }
+    }
+
+    &.hoverable {
+        tr:hover:not(:nth-child(1)) {
+            background-color: $hoverable_background;
+            @include all_components;
+            td {
+                a.action {
+                    opacity: 1;
+                }
+
+            }
+        }
+    }
+
+    &.bordered {
+        table, th, td {
+            border: 1px solid rgba(v.$main_color_darkest, 20%);
+        }
+    }
+
+    &.noformat {
+        th, td {
+            padding: 0 0.3em;
+            border: 1px solid transparent;
+            background-color: transparent;
+        }
+        
+        tr:nth-child(even) {
+            background-color: transparent;
+        }
+        tr:hover {
+            background-color: unset;
+        }
+    }
+}
+
+

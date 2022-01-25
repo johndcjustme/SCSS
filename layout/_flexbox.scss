@@ -22,7 +22,7 @@
         }
     }
     // flex horizontal
-    &_x {
+    &_horizontal {
         &_center {
             justify-content: center;
         }
@@ -39,7 +39,7 @@
             justify-content: space-between;
         }
     }
-    &_y {
+    &_vertical {
         &_center {
             align-items: center;
         }
@@ -56,7 +56,7 @@
             align-content: space-between;
         }
     }
-    &_xy_center {
+    &_center {
         justify-content: center;
         align-items: center;
     } 

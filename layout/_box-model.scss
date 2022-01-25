@@ -44,29 +44,3 @@
 
 
 
-.overflow {
-    overflow: auto;
-    &_x {
-        overflow-x: auto;
-        overflow-y: hidden;
-    }
-    &_y {
-        overflow-x: hidden;
-        overflow-y: auto;
-    }
-    &_x_hidden {
-        overflow-x: hidden;
-    }
-    &_y_hidden {
-        overflow-y: hidden;
-    }
-    &_hidden {
-        overflow: hidden;
-    }
-    &_auto {
-        overflow-y: auto;
-    }
-}
-
-
-

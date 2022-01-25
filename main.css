@@ -345,10 +345,6 @@ template {
   box-sizing: border-box;
 }
 
-html {
-  font-family: "Quicksand", sans-serif;
-}
-
 body {
   font-family: robot;
   background-color: #e9eef3;
@@ -403,6 +399,35 @@ hr {
   text-transform: capitalize;
 }
 
+.overflow {
+  overflow: auto;
+}
+.overflow_x {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.overflow_x_hidden {
+  overflow-x: hidden;
+}
+.overflow_y {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.overflow_y_hidden {
+  overflow-y: hidden;
+}
+.overflow_hidden {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.overflow_auto {
+  overflow: auto;
+}
+
+html {
+  font-family: "Quicksand", sans-serif;
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: #33495d;
   margin: 0.5rem 0;
@@ -413,7 +438,7 @@ p {
 }
 
 label {
-  color: rgba(51, 73, 93, 0.8);
+  color: rgba(51, 73, 93, 0.55);
 }
 
 h1 {
@@ -445,7 +470,7 @@ a {
 }
 
 label {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
 }
 
 body {
@@ -1689,30 +1714,6 @@ body {
   border-left: 4px solid rgba(51, 73, 93, 0.1);
 }
 
-.overflow {
-  overflow: auto;
-}
-.overflow_x {
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-.overflow_y {
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-.overflow_x_hidden {
-  overflow-x: hidden;
-}
-.overflow_y_hidden {
-  overflow-y: hidden;
-}
-.overflow_hidden {
-  overflow: hidden;
-}
-.overflow_auto {
-  overflow-y: auto;
-}
-
 .flex {
   display: flex;
 }
@@ -1734,37 +1735,37 @@ body {
 .flex_wrap_reverse {
   flex-wrap: wrap-reverse;
 }
-.flex_x_center {
+.flex_horizontal_center {
   justify-content: center;
 }
-.flex_x_start {
+.flex_horizontal_start {
   justify-content: flex-start;
 }
-.flex_x_end {
+.flex_horizontal_end {
   justify-content: flex-end;
 }
-.flex_x_around {
+.flex_horizontal_around {
   justify-content: space-around;
 }
-.flex_x_between {
+.flex_horizontal_between {
   justify-content: space-between;
 }
-.flex_y_center {
+.flex_vertical_center {
   align-items: center;
 }
-.flex_y_start {
+.flex_vertical_start {
   align-items: flex-start;
 }
-.flex_y_end {
+.flex_vertical_end {
   align-items: flex-end;
 }
-.flex_y_around {
+.flex_vertical_around {
   align-content: space-around;
 }
-.flex_y_between {
+.flex_vertical_between {
   align-content: space-between;
 }
-.flex_xy_center {
+.flex_center {
   justify-content: center;
   align-items: center;
 }
@@ -1821,6 +1822,55 @@ body {
   width: 100vw;
 }
 
+.nostyle {
+  list-style: none;
+}
+
+ul {
+  line-height: 2em;
+}
+ul li {
+  border-radius: 3px;
+  font-size: 0.9rem;
+  color: rgba(51, 73, 93, 0.8);
+  list-style-type: none;
+  padding: 0.3em 0;
+}
+ul.hoverable li {
+  padding: 0.3em 0.4em;
+}
+ul.hoverable li:hover {
+  background-color: rgba(51, 73, 93, 0.08);
+}
+ul.hoverable li:hover a {
+  opacity: 1;
+}
+ul.selectable li {
+  width: 100%;
+  list-style-type: none;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: 0.1s ease-in-out;
+  padding: 0.3em 0.4em;
+}
+ul.selectable li a {
+  position: absolute;
+  right: 0;
+  padding-right: 5px;
+  z-index: 1;
+  opacity: 0;
+}
+ul.selectable li:hover {
+  background-color: rgba(51, 73, 93, 0.08);
+}
+ul.selectable li:hover a {
+  opacity: 1;
+}
+ul.selectable li:active {
+  background-color: rgba(51, 73, 93, 0.12);
+}
+
 table {
   border-collapse: collapse;
   font-size: 0.9rem;
@@ -1838,6 +1888,7 @@ table th {
   text-align: left;
   color: rgba(51, 73, 93, 0.8);
   font-weight: bold;
+  font-size: 0.85rem;
 }
 table td {
   color: rgba(51, 73, 93, 0.8);
@@ -1847,7 +1898,7 @@ table td .action {
   opacity: 0;
 }
 table.hoverable tr:hover:not(:nth-child(1)) {
-  background-color: rgba(51, 73, 93, 0.07);
+  background-color: rgba(51, 73, 93, 0.08);
   border-radius: 3px;
 }
 table.hoverable tr:hover:not(:nth-child(1)) td a.action {
@@ -1866,55 +1917,6 @@ table.noformat tr:nth-child(even) {
 }
 table.noformat tr:hover {
   background-color: unset;
-}
-
-.nostyle {
-  list-style: none;
-}
-
-ul {
-  line-height: 2em;
-}
-ul li {
-  border-radius: 3px;
-  font-size: 0.9rem;
-  color: rgba(51, 73, 93, 0.8);
-  list-style-type: none;
-  padding: 0.3em 0;
-}
-ul.hoverable li:hover {
-  background-color: rgba(51, 73, 93, 0.07);
-}
-ul.hoverable li:hover a {
-  opacity: 1;
-}
-ul.select {
-  line-height: 2em;
-}
-ul.select li {
-  width: 100%;
-  list-style-type: none;
-  position: relative;
-  overflow: hidden;
-  white-space: nowrap;
-  transition: 0.1s ease-in-out;
-  padding: 0.3em 0.4em;
-}
-ul.select li a {
-  position: absolute;
-  right: 0;
-  padding-right: 5px;
-  z-index: 1;
-  opacity: 0;
-}
-ul.select li:hover {
-  background-color: rgba(51, 73, 93, 0.07);
-}
-ul.select li:hover a {
-  opacity: 1;
-}
-ul.select li:active {
-  background-color: rgba(51, 73, 93, 0.1);
 }
 
 .relative {
@@ -1983,17 +1985,18 @@ input[type=reset] {
   text-transform: uppercase;
   outline: none;
   border: none;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   padding: 0.8em 1em;
   border: 1px solid transparent;
   transition: 0.1s ease-in-out;
+  letter-spacing: 1px;
 }
 button:hover, button:focus,
 input[type=submit]:hover,
 input[type=submit]:focus,
 input[type=reset]:hover,
 input[type=reset]:focus {
-  background-color: #31465a;
+  opacity: 0.9;
 }
 button:active,
 input[type=submit]:active,
@@ -2009,24 +2012,35 @@ input[type=reset]:disabled {
   cursor: not-allowed;
 }
 
-input:not(input[type=submit]):not(input[type=reset]), select, textarea {
+input:not(input[type=submit]):not(input[type=reset]),
+select,
+textarea {
   border-radius: 3px;
   font-size: 0.9rem;
   padding: 0.6em;
-  outline: noen;
+  outline: none;
   border: none;
-  color: rgba(51, 73, 93, 0.8);
+  color: #33495d;
   background-color: rgba(51, 73, 93, 0.07);
   width: 100%;
   margin: 0.1em 0 0.3em 0;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   transition: 0.1s ease-in-out;
+  font-weight: bold;
 }
-input:not(input[type=submit]):not(input[type=reset]):hover, input:not(input[type=submit]):not(input[type=reset]):focus, select:hover, select:focus, textarea:hover, textarea:focus {
-  outline: none;
-  background-color: rgba(51, 73, 93, 0.1);
+input:not(input[type=submit]):not(input[type=reset]):hover,
+select:hover,
+textarea:hover {
+  border: 2px solid rgba(183, 200, 216, 0.55);
+}
+input:not(input[type=submit]):not(input[type=reset]):focus,
+select:focus,
+textarea:focus {
+  border: 2px solid #5353c5;
+  border: 2px solid rgba(51, 73, 93, 0.55);
 }
 
 input[type=password] {
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
 }/*# sourceMappingURL=main.css.map */

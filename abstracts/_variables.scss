@@ -13,6 +13,9 @@ $main_color_darker: rgba($main_color, 80%);
 $main_color_darkest: $main_color;
 
 
+$accent_color_1: rgb(83, 83, 197);
+
+
 // fontsizes
 $fontsizes: (
     'h1': 3rem,
@@ -21,11 +24,17 @@ $fontsizes: (
     'h4': 1.5rem,
     'h5': 1rem,
 
+    'p': .9rem,
+    'a': .9rem,
+    'label': .8rem,
+    'button': 0.7rem,
+
+    
+    'normal': 0.9rem, //default
+
     'small': 0.75rem,
     'medium': 0.85rem,
     
-    'normal': 0.9rem, //default
-    'button': 0.75rem,
 );
 
 // $font_family: 'Roboto', sans-serif;

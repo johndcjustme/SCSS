@@ -12,9 +12,7 @@
     box-sizing: border-box;
 } 
 
-html {
-    font-family: 'Quicksand', sans-serif;
-}
+
 
 body {
     font-family: robot;
@@ -73,6 +71,43 @@ hr {
 .capitalize {
     text-transform: capitalize;
 }
+
+
+
+
+
+
+.overflow {
+    overflow: auto;
+    &_x {
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        &_hidden {
+            overflow-x: hidden;
+        }
+    }
+    &_y {
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        &_hidden {
+            overflow-y: hidden;
+        }
+    }
+
+    &_hidden {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    &_auto {
+        overflow: auto;
+    }
+}
+
+
+
 
 
 

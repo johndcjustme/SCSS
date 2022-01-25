@@ -2,24 +2,36 @@
 @use '../abstracts/variables' as v;
 @use '../abstracts/mixins' as *;
 
-input:not(input[type=submit]):not(input[type=reset]), select, textarea {
+
+$input_border_thickness: 2px solid;
+
+input:not(input[type=submit]):not(input[type=reset]), 
+select, 
+textarea {
     @include all_components;
     font-size: map.get(v.$fontsizes, 'normal');
     padding: 0.6em;
-    outline: noen;
+    outline: none;
     border: none;
-    color: v.$main_color_darker;
+    color: v.$main_color_darkest;
     background-color: rgba(v.$main_color_darkest, 7%);
     width: 100%;
     margin: 0.1em 0 0.3em 0;
-    border: 1px solid transparent;
+    border: $input_border_thickness transparent;
     transition: v.$transition1;
-    &:hover, &:focus {
-        outline: none;
-        background-color: rgba(v.$main_color_darkest, 10%);
+    font-weight: bold;
+
+    &:hover {
+        border: $input_border_thickness lighten(v.$main_color_dark, 50%);
+    }
+
+    &:focus {
+        border: $input_border_thickness v.$accent_color_1;
+        border: $input_border_thickness v.$main_color_dark;
     }
 }
 
 input[type=password] {
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
 }
