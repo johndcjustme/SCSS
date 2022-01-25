@@ -1,3 +1,0 @@
-function bla(){
-    var john;
-}
