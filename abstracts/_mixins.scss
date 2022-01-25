@@ -1,0 +1,15 @@
+@use 'sass:map';
+@use '../abstracts/variables' as v;
+
+@mixin all_components {
+    border-radius: if(v.$border_rad, v.$border_rad_component, null);
+}
+@mixin shadow_outset {
+    box-shadow: if(v.$shadow, $shadow_outset, null);
+}
+@mixin shadow_inset {
+    box-shadow: if(v.$shadow, $shadow_inset, null);
+}
+@mixin all_containers {
+    border-radius: if(v.$border_rad, v.$border_rad_container, null);    
+}

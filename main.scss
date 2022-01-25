@@ -1,0 +1,37 @@
+// 1, configuration and helpers 
+@use './abstracts/variables';
+@use './abstracts/functions';
+@use './abstracts/mixins';
+
+// 2. vendors
+@use './vendors/normalize';
+
+// 3 base 
+@use './base/base';
+@use './base/fonts';
+@use './base/typography';
+
+// 4 layout 
+@use './layout/box-model';
+@use './layout/flexbox';
+@use './layout/grid';
+@use './layout/gaps';
+@use './layout/header';
+@use './layout/footer';
+@use './layout/containers';
+@use './layout/height-width';
+@use './layout/table';
+@use './layout/lists';
+@use './layout/positions';
+
+// 5 components 
+@use './components/form';
+@use './components/button';
+@use './components/text-field';
+
+
+// 6. page-specific styles 
+@use './pages/home';
+
+// 7. themes 
+// @use './themes/defaults';

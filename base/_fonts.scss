@@ -1,0 +1,40 @@
+@use 'sass:map';
+@use '../abstracts/variables' as v;
+
+
+
+
+//colors
+h1,h2,h3,h4,h5,h6 {
+    color: v.$main_color_darkest;
+    margin: 0.5rem 0;
+}
+p { color: v.$main_color_darker; }
+label { color: v.$main_color_darker; }
+
+
+
+// sizes 
+h1 { font-size: map.get(v.$fontsizes, 'h1'); }
+h2 { font-size: map.get(v.$fontsizes, 'h2'); }
+h3 { font-size: map.get(v.$fontsizes, 'h3'); }
+h4 { font-size: map.get(v.$fontsizes, 'h4'); }
+h5 { font-size: map.get(v.$fontsizes, 'h5'); }
+h6 { font-size: map.get(v.$fontsizes, 'h6'); }
+
+p { font-size: map.get(v.$fontsizes, 'normal'); }
+a { font-size: map.get(v.$fontsizes, 'normal'); }
+label { font-size: map.get(v.$fontsizes, 'small'); }
+
+// button, input[type=submit] {
+//     font-size: map.get(v.$fontsizes, 'ssmall');
+// }
+
+// input:not(input[type=submit]) {
+//     font-size: map.get(v.$fontsizes, 'normal');
+// }
+
+
+html {
+    font-family: 'Quicksand', sans-serif;
+}

@@ -1,0 +1,15 @@
+@use 'sass:map';
+@use '../abstracts/variables' as v;
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.font {
+    &_s { font-size: map.get(v.$fontsizes, 'small'); }
+    &_m { font-size: map.get(v.$fontsizes, 'medium'); }
+
+    &_normal {font-weight: normal;}
+    &_bold {font-weight: bold;}
+}

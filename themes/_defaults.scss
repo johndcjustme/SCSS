@@ -1,0 +1,101 @@
+@use 'sass:map';
+@use '../abstracts/variables' as v;
+@use '../components/button' as *;
+
+
+
+
+
+$main_color_light: #E0E5EC;
+$main_color_dark: rgba(255,255,255, 0.5);
+$main_color_darker: rgb(163,177,198,0.6);
+$main_color_darkest: rgb(100, 100, 100);
+
+$shadow-outset: 3px 3px 7px $main_color_darker, -3px -3px 7px $main_color_dark;
+$shadow-inset: inset 3px 3px 8px $main_color_darker, inset -3px -3px 3px $main_color_dark;
+
+
+$rounded: true;
+$border-radius: 1em;
+
+
+@mixin rounded {
+    border-radius: if($rounded, $border-radius, null);
+}
+
+
+.card {
+    box-shadow: unset;
+    background: unset;
+}
+
+body {
+    background-color: $main_color_light;
+}
+
+input:not(input[type=submit]):not(input[type=reset]) {
+    border-radius: 50px;
+    background: $main_color_light;
+    color: $main_color_darkest;
+    box-shadow: $shadow-inset;
+    &:hover, &:focus {
+        background: unset;
+    }
+}
+
+button, input[type=submit], input[type=reset] {
+    border-radius: 50px;
+    box-shadow: $shadow-outset;
+    background: $main_color_light;
+    border: 1px solid transparent;
+    color: $main_color_darkest;
+    &:active {
+        transform: unset;
+        box-shadow: unset;
+        border: 1px solid $main_color_darker;
+    }
+}
+
+tr:hover:not(:first-child) {
+    border-radius: 50px;
+    box-shadow: $shadow-outset;
+    background-color: $main_color_light;
+    color: $main_color_darkest;
+}
+
+// @mixin themes ($theme_name) {
+
+
+
+//     .#{$theme_name} {
+
+//         background-color: $main_color_light;
+
+//         .card {
+//             background-color: unset;
+//             box-shadow: unset;
+//         }
+
+//         button, input[type=submit], input[type=reset] {
+//             @include buttons($main_color_light);
+//             @include rounded;
+//             border-radius: 50px;
+//             background-color: $main_color_light;
+//             box-shadow: $shadow-outset;
+//             color: lighten($color: $main_color_dark, $amount: 80%);
+//             // background-color: $main_color_dark;
+//             // background-color: blue;
+//         }
+
+//         input:not(input[type=submit]):not(input[type=reset]) {
+//             @include rounded;
+//             background-color: $main_color_light;
+//             box-shadow: $shadow-inset;
+//         }
+//     }
+// }   
+
+
+
+// @include themes(theme-1);
+// @include themes(theme-2, black);

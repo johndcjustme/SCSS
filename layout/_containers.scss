@@ -1,0 +1,9 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as *;
+
+.card {
+    @include all_containers;
+    background-color: white;
+    box-shadow: v.$card_shadow;
+    padding: 1em;
+}

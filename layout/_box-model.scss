@@ -1,0 +1,70 @@
+@use '../abstracts/variables' as v;
+
+@for $i from 1 through 20 {
+    $value: 0.1 * $i;
+    .p_#{$i} { padding: #{$value}rem }
+    .pt_#{$i} { padding-top: #{$value}rem }
+    .pr_#{$i} { padding-right: #{$value}rem }
+    .pb_#{$i} { padding-bottom: #{$value}rem }
+    .pl_#{$i} { padding-left: #{$value}rem }
+    .px_#{$i} { padding-left: #{$value}rem; padding-right: #{$value}rem; }
+    .py_#{$i} { padding-top: #{$value}rem; padding-bottom: #{$value}rem; }
+
+    .m_#{$i} { margin: #{$value}rem }
+    .mt_#{$i} { margin-top: #{$value}rem }
+    .mr_#{$i} { margin-right: #{$value}rem }
+    .mb_#{$i} { margin-bottom: #{$value}rem }
+    .ml_#{$i} { margin-left: #{$value}rem }
+    .mx_#{$i} { margin: 0 #{$value}rem }
+    .my_#{$i} { margin: #{$value}rem 0 }
+}
+
+
+@for $i from 1 to 5 {
+    .b {
+        &_#{$i} {
+            border: #{$i}px solid rgba(v.$main_color_darkest, 10%);
+        }
+        &t_#{$i} {
+            border-top: #{$i}px solid rgba(v.$main_color_darkest, 10%);
+        }
+        &r_#{$i} {
+            border-right: #{$i}px solid rgba(v.$main_color_darkest, 10%);
+        }
+        &b_#{$i} {
+            border-bottom: #{$i}px solid rgba(v.$main_color_darkest, 10%);
+        }
+        &l_#{$i} {
+            border-left: #{$i}px solid rgba(v.$main_color_darkest, 10%);
+        }    
+    }
+}
+
+
+
+.overflow {
+    overflow: auto;
+    &_x {
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    &_y {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    &_x_hidden {
+        overflow-x: hidden;
+    }
+    &_y_hidden {
+        overflow-y: hidden;
+    }
+    &_hidden {
+        overflow: hidden;
+    }
+    &_auto {
+        overflow-y: auto;
+    }
+}
+
+
+

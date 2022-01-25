@@ -1,0 +1,25 @@
+@use 'sass:map';
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as *;
+
+input:not(input[type=submit]):not(input[type=reset]), select, textarea {
+    @include all_components;
+    font-size: map.get(v.$fontsizes, 'normal');
+    padding: 0.6em;
+    outline: noen;
+    border: none;
+    color: v.$main_color_darker;
+    background-color: rgba(v.$main_color_darkest, 7%);
+    width: 100%;
+    margin: 0.1em 0 0.3em 0;
+    border: 1px solid transparent;
+    transition: v.$transition1;
+    &:hover, &:focus {
+        outline: none;
+        background-color: rgba(v.$main_color_darkest, 10%);
+    }
+}
+
+input[type=password] {
+    letter-spacing: 0.1rem;
+}

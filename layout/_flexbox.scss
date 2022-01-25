@@ -1,0 +1,64 @@
+
+
+// FLEXBOX
+.flex { 
+    display: flex; 
+    &_column {
+        flex-direction: column;
+        &_reverse {
+            flex-direction: column-reverse;
+        }
+    }
+    &_row {
+        flex-direction: row;
+        &_reverse {
+            flex-direction: row-reverse;
+        }
+    }
+    &_wrap {
+        flex-wrap: wrap;
+        &_reverse {
+            flex-wrap: wrap-reverse;
+        }
+    }
+    // flex horizontal
+    &_x {
+        &_center {
+            justify-content: center;
+        }
+        &_start {
+            justify-content: flex-start;
+        }
+        &_end {
+            justify-content: flex-end;
+        }
+        &_around {
+            justify-content: space-around;
+        }
+        &_between {
+            justify-content: space-between;
+        }
+    }
+    &_y {
+        &_center {
+            align-items: center;
+        }
+        &_start {
+            align-items: flex-start;
+        }
+        &_end {
+            align-items: flex-end;
+        }
+        &_around {
+            align-content: space-around;
+        }
+        &_between {
+            align-content: space-between;
+        }
+    }
+    &_xy_center {
+        justify-content: center;
+        align-items: center;
+    } 
+}
+
