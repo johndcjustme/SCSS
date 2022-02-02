@@ -13,10 +13,15 @@
 } 
 
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 
 body {
-    font-family: robot;
-    background-color: lighten(v.$main_color_darkest, 65%);
+    background-color: v.$body_background;
+    color: v.$main_color;
 }
 
 hr {
@@ -25,6 +30,10 @@ hr {
 }
 
 
+
+.color_dark { color: v.$main_color_dark; }
+.color_darker { color: v.$main_color_darker; }
+.color_darkest { color: v.$main_color_darkest; }
 
 
 
@@ -72,6 +81,9 @@ hr {
     text-transform: capitalize;
 }
 
+.nodecoration {
+    text-decoration: none;
+}
 
 
 

@@ -26,6 +26,7 @@
 // 5 components 
 @use './components/button';
 @use './components/input';
+@use './components/modal';
 
 
 // 6. page-specific styles 
@@ -33,3 +34,10 @@
 
 // 7. themes 
 // @use './themes/defaults';
+
+
+// 8. custom
+@use './custom/landing';
+@use './custom/sidenav';
+@use './custom/dashboard';
+@use './custom/forgot-password';

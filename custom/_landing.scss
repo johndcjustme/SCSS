@@ -1,0 +1,158 @@
+.landing {
+    &_sections {
+        margin: auto;
+        padding: 0 2rem;
+        margin: 0 15%;
+
+    }
+
+    &_header {
+        height: 60px;
+        padding: 0 2rem;
+        margin: 0 7%;
+
+        img {
+            height: 35px;
+            width: auto;
+        }
+
+        span {
+            color: #004FC6;
+            display: inline-block;
+        }
+
+        .button_booknow {
+            border-radius: 50px;
+            padding: 1em 1.3em;
+            background-color: transparent;
+            border: 2px solid #004FC6;
+            color: #004FC6;
+            box-shadow: none;
+            font-size: 0.65rem;
+            &:hover {
+                background-color: #004FC6;
+                color: #fff;
+            }
+        }
+
+        .button_text {
+            font-size: 0.8rem;
+            margin-right: 2em;
+            color: #004FC6;
+            text-transform: uppercase;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &_title {
+        height: calc(100vh - 60px);
+        img {
+            animation-name: bounce;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: scale(1.3);
+                // transform: translateY(0);
+            }
+            50% {
+                transform: scale(1.4);
+            }
+            100% {
+                transform: scale(1.3);
+                // transform: translateY(10);
+            }
+        }
+
+        img, h3, p {
+            transform: scale(1.4);
+        }
+
+        img {
+            max-width: 340px;
+            height: auto;
+        }
+
+        h3 {
+            font-weight: 100;
+            letter-spacing: 0.4rem;
+            margin-top: 2em;
+            margin-bottom: 0.3em;
+            font-size: 1.5rem;
+            color: #004FC6;
+        }
+
+        p {
+            font-size: 1.2rem;
+            letter-spacing: 0.1rem;
+        }
+    }
+}
+
+.about_section {
+    // margin: 10% 0;
+    display: flex;
+    padding-top: 10%;
+    padding-bottom: 10%;
+
+    >div {
+        width: 50%;
+    }
+
+    p {
+        line-height: 2rem;
+    }
+}
+
+
+@media screen and(max-width: 900px) {
+    .landing {
+        margin: 0 5%;
+
+        &_header {
+            margin: 0 5%;
+        }
+
+        &_title {
+            img, h3, p {
+                transform: scale(1);
+            }
+
+            img {
+                animation-name: bounce;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+            }
+
+            @keyframes bounce {
+                0% {
+                    transform: scale(0.9);
+                }
+                50% {
+                    transform: scale(1);
+                }
+                100% {
+                    transform: scale(0.9);
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 768px) {
+    .landing_sections, .landing_header {
+        margin: unset;
+
+        span {
+            display: none;
+        }
+    }
+
+    .about_section {
+        flex-direction: column;
+    }
+}

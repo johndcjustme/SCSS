@@ -1,10 +1,10 @@
 .w {
-    &_s { max-width: 420px; }
-    &_sm { max-width: 640px; }
-    &_md { max-width: 768px; }
-    &_lg { max-width: 1024px; }
-    &_xl { max-width: 1280px; }
-    &_2xl { max-width: 1536px; }
+    &_s { width: 420px; }
+    &_sm { width: 640px; }
+    &_md { width: 768px; }
+    &_lg { width: 1024px; }
+    &_xl { width: 1280px; }
+    &_2xl { width: 1536px; }
 }
 .full {
     &_h { height: 100%; }

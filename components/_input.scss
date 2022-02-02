@@ -3,7 +3,7 @@
 @use '../abstracts/mixins' as *;
 
 
-$input_border_thickness: 2px solid;
+$input_border_thickness: 1px solid;
 
 input:not(input[type=submit]):not(input[type=reset]), 
 select, 
@@ -17,17 +17,30 @@ textarea {
     background-color: rgba(v.$main_color_darkest, 7%);
     width: 100%;
     margin: 0.1em 0 0.3em 0;
-    border: $input_border_thickness transparent;
+    border: $input_border_thickness rgba(v.$main_color_darkest, 9%);
     transition: v.$transition1;
     font-weight: bold;
 
     &:hover {
-        border: $input_border_thickness lighten(v.$main_color_dark, 50%);
+        border: $input_border_thickness rgba(v.$main_color_darkest, 15%);
+    }
+    &:focus {
+        border: $input_border_thickness rgba(v.$main_color_darkest, 25%);       
+    }
+    &::placeholder {
+        color: rgba(v.$main_color, 30%);
+        font-weight: normal;
     }
 
-    &:focus {
-        border: $input_border_thickness v.$accent_color_1;
-        border: $input_border_thickness v.$main_color_dark;
+    &.input_small {
+        padding: 0;
+        font-size: map.get(v.$fontsizes, 'small');
+        font-weight: normal;
+    }
+
+    &.noformat {
+        border: none;
+        background: transparent;
     }
 }
 

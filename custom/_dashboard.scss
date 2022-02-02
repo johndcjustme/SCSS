@@ -1,0 +1,19 @@
+@use '../abstracts/variables' as v;
+
+.topbar {
+    height: 40px;
+    padding: 0 1em;
+    overflow: hidden;
+}
+
+.main_content {
+    height: calc(100vh - 40px);
+
+    &_inner {
+        height: calc(100vh - 40px);
+    }
+}
+
+
+
+

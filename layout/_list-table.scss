@@ -17,13 +17,14 @@ ul {
         @include all_components;
         font-size: map.get(v.$fontsizes, 'normal'); 
         color: v.$main_color_darker;
+        transition: v.$transition1;
         list-style-type: none;
-        padding: 0.3em 0;
+        padding: 0.2em 0;
     }
 
     &.hoverable {
         li {
-            padding: 0.3em 0.4em;
+            padding: 0.2em 0.4em;
 
             &:hover {
                 background-color: $hoverable_background;
@@ -42,7 +43,7 @@ ul {
             overflow: hidden;
             white-space: nowrap;
             transition: v.$transition1;
-            padding: 0.3em 0.4em;
+            padding: 0.2em 0.4em;
 
             a {
                 position: absolute;
@@ -60,7 +61,7 @@ ul {
                 }
             }
 
-            &:active {
+            &:active, &.active {
                 background-color: $selectable_background;
             }
         }
@@ -112,12 +113,14 @@ table {
         tr:hover:not(:nth-child(1)) {
             background-color: $hoverable_background;
             @include all_components;
-            td {
-                a.action {
-                    opacity: 1;
-                }
+            transition: v.$transition1;
+            td a.action {
+                opacity: 1;
+            } 
+        }
 
-            }
+        tr td a.action:hover {
+            transform: scale(1.1);
         }
     }
 

@@ -6,4 +6,47 @@
     background-color: white;
     box-shadow: v.$card_shadow;
     padding: 1em;
+
+    &_noformat {
+        box-shadow: unset;
+        background-color: transparent;
+    }
 }
+
+.alert {
+    @extend .card;
+    box-shadow: v.$pop_message_shadow;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    z-index: 20;
+    // animation-name: slide_to_left;
+    // animation-duration: 5s;
+    // animation-timing-function: ease-in-out;
+    // animation-iteration-count: 1;
+}
+
+// @keyframes slide_to_left {
+//     0% {
+//         width: 0;
+//         padding-left: 0;
+//         padding-right: 0;
+//     }
+//     25% {
+//         width: auto;
+//         padding-left: 1em;
+//         padding-right: 1em;
+//     }
+//     75% {
+//         width: auto;
+//         padding-left: 1em;
+//         padding-right: 1em;
+//     }
+//     100% {
+//         width: 0;
+//         padding-left: 0;
+//         padding-right: 0;
+//         display: none;
+//     }
+// }
+

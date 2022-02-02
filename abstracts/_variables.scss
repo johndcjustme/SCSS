@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Nunito+Sans&family=Quicksand:wght@500&family=Roboto:wght@300;400&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Nunito+Sans&family=Quicksand:wght@500&family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nunito&family=Oswald&family=Raleway&display=swap');
+
+$font_family: 'Nunito', sans-serif;
 
 
 // defaul light theme colors
@@ -12,34 +15,36 @@ $main_color_dark: rgba($main_color, 55%);
 $main_color_darker: rgba($main_color, 80%);
 $main_color_darkest: $main_color;
 
+$body_background: #F6F6F6;
+
 
 $accent_color_1: rgb(83, 83, 197);
 
 
 // fontsizes
 $fontsizes: (
-    'h1': 3rem,
-    'h2': 2.5rem,
-    'h3': 2rem,
-    'h4': 1.5rem,
+    'h1': 2.8rem,
+    'h2': 2.3rem,
+    'h3': 1.8rem,
+    'h4': 1.6rem,
     'h5': 1rem,
 
     'p': .9rem,
     'a': .9rem,
     'label': .8rem,
-    'button': 0.7rem,
+    'button': 0.65rem,
 
     
     'normal': 0.9rem, //default
 
     'small': 0.75rem,
     'medium': 0.85rem,
+    'large': 0.95rem,
     
 );
 
 // $font_family: 'Roboto', sans-serif;
 // $font_family: 'Quicksand', sans-serif;
-$font_family: 'Montserrat Alternates', sans-serif;
 
 
 $border_rad: true;
@@ -47,11 +52,15 @@ $border_rad_component: 3px;
 $border_rad_container: 5px;
 
 // $card_shadow: 0 0.4rem 1.2rem rgba(69, 93, 116, 0.247);
-$card_shadow: 0px 5px 8px rgba(99, 129, 156, 0.2);
+$card_shadow: 0px 5px 15px rgba(99, 129, 156, 0.2);
+$pop_message_shadow: 0px 7px 25px rgba(99, 129, 156, 0.342);
 
 $shadow: false;
 $shadow_outset: 3px 3px 6px rgba(99, 129, 156, 0.2), -3px -3px 6px rgba(255, 255, 255, 0.8);
 $shadow_inset: inset 5px 5px 8px rgba(0, 0, 0, 0.2), inset -5px -5px 8px rgba(255, 255, 255, 0.8);
+
+
+$button_gradient: linear-gradient(92.44deg, #2B4FFF 0%, #AD08FF 100.1%);
 
 
 $transition1: 0.1s ease-in-out;
