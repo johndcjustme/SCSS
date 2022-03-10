@@ -1,0 +1,68 @@
+@use 'sass:map';
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as *;
+
+
+.alert {
+    @include all_components;
+    box-shadow: v.$pop_message_shadow;
+    position: fixed;
+    z-index: 200;
+    width: clamp(250px, 100%, 300px);
+    // background-color: white;
+    font-size: map.get(v.$fontsizes, 'normal');
+    // right: -350px;
+    right: 1em;
+    bottom: -10em;
+    display: flex;
+    justify-content: space-between;
+
+    animation: bottom_to_top 4s ease-in-out;
+    animation-iteration-count: 1;
+
+    >div {
+        &:first-child, &:last-child {
+            width: 4em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &.success {
+        // background-color: white;
+    }
+}
+
+// animate
+@keyframes bottom_to_top {
+    0% {
+        // right: -300px;
+        bottom: -10em;
+        opacity: 0;
+    }
+    8% { 
+        // right: 1em;
+        bottom: 1em;
+        opacity: 1;
+
+    }
+    90% {
+        bottom: 1em;
+        // right: 1em;
+    }
+    100% {
+        bottom: -10em;
+        // opacity: 0;
+
+        // right: -350px;
+    }
+}
+
+
+
+
+.text_error {
+    color: red;
+    font-size: map.get(v.$fontsizes, 'normal');
+}

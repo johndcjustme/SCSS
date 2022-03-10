@@ -3,37 +3,34 @@
 @use '../abstracts/mixins' as *;
 
 
-$input_border_thickness: 1px solid;
-
-input:not(input[type=submit]):not(input[type=reset]), 
-select, 
-textarea {
-    @include all_components;
+@mixin inputs {
     font-size: map.get(v.$fontsizes, 'normal');
     padding: 0.6em;
+    height: 2.6em;
     outline: none;
     border: none;
-    color: v.$main_color_darkest;
-    background-color: rgba(v.$main_color_darkest, 7%);
+    color: v.$theme_dark_400;
+    background-color: lighten(v.$theme_light_200, 5%);
     width: 100%;
     margin: 0.1em 0 0.3em 0;
-    border: $input_border_thickness rgba(v.$main_color_darkest, 9%);
+    border: $input_border_thickness transparent;
     transition: v.$transition1;
     font-weight: bold;
 
     &:hover {
-        border: $input_border_thickness rgba(v.$main_color_darkest, 15%);
+        border: $input_border_thickness v.$theme_light_500;
     }
     &:focus {
-        border: $input_border_thickness rgba(v.$main_color_darkest, 25%);       
+        border: $input_border_thickness v.$theme_dark_100;   
     }
     &::placeholder {
-        color: rgba(v.$main_color, 30%);
+        color: v.$theme_dark_100;
         font-weight: normal;
     }
 
     &.input_small {
-        padding: 0;
+        // padding: 0;
+        height: 2.5em;
         font-size: map.get(v.$fontsizes, 'small');
         font-weight: normal;
     }
@@ -41,10 +38,31 @@ textarea {
     &.noformat {
         border: none;
         background: transparent;
+        padding: 0;
+        margin: 0;
+        color: v.$main_color_darker;
+        font-size: map.get(v.$fontsizes, 'label');
+        font-weight: normal;
     }
+    &.input_err {
+        border: $input_border_thickness red;
+    }
+}
+
+
+$input_border_thickness: 1px solid;
+
+input:not(input[type=submit]):not(input[type=reset]):not(input[type=radio]):not(input[type=checkbox]), 
+select, 
+textarea {
+    @include all_components;
+    @include inputs;
 }
 
 input[type=password] {
     letter-spacing: 0.2rem;
     font-weight: bold;
+    &::placeholder {
+        letter-spacing: 0;
+    }
 }

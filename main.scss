@@ -7,7 +7,6 @@
 @use './vendors/normalize';
 
 // 3 base 
-@use './base/base';
 @use './base/fonts';
 @use './base/typography';
 
@@ -22,11 +21,13 @@
 @use './layout/height-width';
 @use './layout/list-table';
 @use './layout/positions';
+@use './layout/alert';
 
 // 5 components 
 @use './components/button';
 @use './components/input';
 @use './components/modal';
+@use './components/animation';
 
 
 // 6. page-specific styles 
@@ -37,7 +38,16 @@
 
 
 // 8. custom
+@use './custom/classes';
+@use './custom/search';
 @use './custom/landing';
-@use './custom/sidenav';
 @use './custom/dashboard';
 @use './custom/forgot-password';
+@use './custom/paginator';
+@use './custom/forum';
+
+
+
+
+
+@use './base/base';

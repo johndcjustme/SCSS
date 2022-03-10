@@ -1,0 +1,38 @@
+@use 'sass:map';
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as *;
+
+
+
+
+.red {
+    color: red;
+}
+.green {
+    color: green;
+}
+
+.bg_green {
+    color: white;
+    background-color: green;
+}
+
+.bg_red {
+    color: white;
+    background-color: red;
+}
+
+.bg_warning {
+    color: white;
+    background-color: red;
+}
+.bg_success {
+    background-color: green;
+    color: white;
+}
+
+.slow { transition: v.$slow; }
+.normal { transition: v.$normal; }
+.fast { transition: v.$fast; }
+
+.radius_1 { @include all_components; }

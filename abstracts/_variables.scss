@@ -1,24 +1,48 @@
 // @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Nunito+Sans&family=Quicksand:wght@500&family=Roboto:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nunito&family=Oswald&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
 
 $font_family: 'Nunito', sans-serif;
+$font_family: 'Poppins', sans-serif;;
 
 
 // defaul light theme colors
 $main_color: #33495d;
+$main_color: #000000;
 
 // $main_color_lightest: ;
 // $main_color_lighter: ;
 // $main_color_light: ;
-
-$main_color_dark: rgba($main_color, 55%);
-$main_color_darker: rgba($main_color, 80%);
+$main_color_light: #d3d3d3;
+$main_color_lighter: #f9f9f9;
+$main_color_lightest: #fff;
+$main_color_dark: $main_color;
+// $main_color_darker: rgba($main_color, 75%);
+$main_color_darker: $main_color;
 $main_color_darkest: $main_color;
 
-$body_background: #F6F6F6;
+
+$theme_dark_100: rgb(161,160,160);
+$theme_dark_200: rgb(131, 129,129);
+$theme_dark_300: rgb(73,70,70);
+$theme_dark_400: rgb(28,27,27);
+$theme_dark_500: rgb(0,0,0);
+
+
+$theme_light_100: rgb(255,255,255);
+$theme_light_200: rgb(230,230,230);
+$theme_light_300: rgb(217,217,217);
+$theme_light_400: rgb(204,204,204);
+$theme_light_500: rgb(191,191,191);
+
+$theme_accent_1: #2B4FFF;
+$theme_accent_2: #AD08FF;
 
 
 $accent_color_1: rgb(83, 83, 197);
+
+$accent_color_2: #2B4FFF;
+$accent_color_3: #AD08FF;
 
 
 // fontsizes
@@ -52,15 +76,25 @@ $border_rad_component: 3px;
 $border_rad_container: 5px;
 
 // $card_shadow: 0 0.4rem 1.2rem rgba(69, 93, 116, 0.247);
-$card_shadow: 0px 5px 15px rgba(99, 129, 156, 0.2);
-$pop_message_shadow: 0px 7px 25px rgba(99, 129, 156, 0.342);
+// $card_shadow: 0px 5px 15px rgba(99, 129, 156, 0.2);
+$card_shadow: 0px 15px 15px -7px rgba(99, 129, 156, 0.322);
+$pop_message_shadow: 0px 10px 25px -4PX rgba(76, 90, 121, 0.521);
 
 $shadow: false;
-$shadow_outset: 3px 3px 6px rgba(99, 129, 156, 0.2), -3px -3px 6px rgba(255, 255, 255, 0.8);
+$shadow_outset: 3px 3px 8px rgba(99, 129, 156, 0.336), -3px -3px 8px rgb(255, 255, 255);
 $shadow_inset: inset 5px 5px 8px rgba(0, 0, 0, 0.2), inset -5px -5px 8px rgba(255, 255, 255, 0.8);
+
+$box_shadow: 0px 1px 3px rgba(99, 129, 156, 0.2);
+
+$bg_transparent: false;
+$bg_color: transparent;
 
 
 $button_gradient: linear-gradient(92.44deg, #2B4FFF 0%, #AD08FF 100.1%);
 
 
 $transition1: 0.1s ease-in-out;
+$fast: 0.1s ease-in-out;
+$normal: 0.2s ease-in-out;
+$slow: 0.3s ease-in-out;
+

@@ -4,16 +4,20 @@
 
 
 html {
-    // font-family: v.$font_family;
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-family: v.$font_family;
     font-size: 1rem;
 }
 
+
+
 @media screen and (min-width: 1920px) {
     html {
-        font-size: 1.1rem;
+        font-size: 1.4rem;
     }
 }
+
 
 
 //colors
@@ -21,8 +25,8 @@ h1,h2,h3,h4,h5,h6 {
     color: v.$main_color_darkest;
     margin: 0.3em 0;
 }
-p, a { color: v.$main_color_darker; }
-label { color: v.$main_color_darker; }
+p, a { color: v.$theme_dark_400; }
+label { color: v.$main_color_dark; }
 
 
 
@@ -52,3 +56,14 @@ legend {
 .color_darkest { color: v.$main_color_darkest; }
 
 
+.font {
+    &_s { font-size: map.get(v.$fontsizes, 'small'); }
+    &_m { font-size: map.get(v.$fontsizes, 'medium'); }
+
+    &_normal {font-weight: normal;}
+    &_bold {font-weight: bold;}
+
+    &_300 {font-weight: 300;}
+    &_400 {font-weight: 400;}
+    &_500 {font-weight: 500;}
+}

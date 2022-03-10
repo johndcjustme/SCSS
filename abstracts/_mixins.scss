@@ -13,3 +13,6 @@
 @mixin all_containers {
     border-radius: if(v.$border_rad, v.$border_rad_container, null);    
 }
+@mixin bg_transparent {
+    background-color: if(v.$bg_transparent, v.$bg_color, null);
+}

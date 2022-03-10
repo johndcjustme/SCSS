@@ -1,0 +1,44 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as v; 
+
+.forum_container {
+
+    
+
+    .forum_post {
+        @include all_components;
+        border: 1px solid v.$theme_light_300;
+
+        .btn_post_option {
+            // color: red;
+        }
+
+        .btn_post_option:hover {
+            color: v.$theme_dark_500;
+        }
+
+        .forum_post_option {
+            // box-shadow: v.$pop_message_shadow;
+
+            a.send {
+                color: v.$accent_color_2;
+            }
+        }
+        &:hover {
+            transition: v.$normal;
+            border: 1px solid v.$theme_accent_1;
+            .btn_post_option {
+                transition: v.$normal;
+                color: v.$theme_dark_500;
+            }
+        }
+    }
+
+
+
+    .forum_comments {
+        .forum_comments_indicator {
+            background: linear-gradient(to bottom, v.$theme_accent_1, v.$theme_accent_2);
+        }
+    }
+}

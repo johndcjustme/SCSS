@@ -1,0 +1,46 @@
+@use 'sass:map';
+@use '../abstracts/variables' as v;
+
+
+.paginator_container {
+    background: transparent;
+    display: flex;
+    justify-content: flex-end;
+    
+    nav {
+        height: 2.5em;
+        width: 8em;
+        margin: 0.7em 0;
+        font-size: map.get(v.$fontsizes, 'medium');
+        color: v.$main_color_darker;
+
+        >div div {
+            height: 2.5em;
+            width: 2.5em;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: v.$box_shadow;
+
+
+            .current_num {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        .btn:hover:not(.disabled) {
+            color: v.$main_color_darkest;
+        }
+
+        .disabled {
+            color: rgba(v.$main_color, 30%);
+        }
+    }
+
+}

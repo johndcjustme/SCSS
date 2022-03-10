@@ -1,0 +1,117 @@
+@use 'sass:map';
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as *;
+
+.search_container {
+    height: 2.7em;
+    width: auto;
+    position: relative;
+    z-index: 10;
+    // background-color: blue;
+
+
+    .search_field {
+        transition: 1s;
+        position: absolute;
+        top: 0;
+        right: 2em;
+        width: 0;
+        display: none;
+        opacity: 0;
+    }
+
+    .search_icon {
+        position: relative;
+        height: 100%;
+        width: 2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;        
+        i {
+            position: absolute;
+            color: v.$main_color_dark;
+            right: 0.5em;
+            top: 0.8em;
+        }
+    }
+
+    &:hover {
+        .search_field {
+                opacity: 1;
+                transition: 1s ease-in-out;
+                width: 220px;
+                animation: slide v.$normal;
+                display: block;
+                
+        }
+        .search_icon i {
+            color: v.$accent_color_2;
+        }
+    }
+    
+    @keyframes slide {
+        from {
+            width: 100%;
+        }
+        to {
+            width: 220px;
+        }
+    }
+}
+
+.sort_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.7em;
+    width: 2em;
+    position: relative;
+    padding: 0 0.3em;
+    margin-right: 1em;
+    i {
+        color: v.$main_color_dark;
+    }
+
+    .sort_content {
+        @include all_components;
+        box-shadow: v.$pop_message_shadow;
+        position: absolute;
+        top: 2.7em;
+        background-color: white;
+        padding: 0.7em;
+        right: 0;
+        // background-color: red;
+        // padding: 1em;
+        z-index: 50;
+        width: 9em;
+        display: none;
+
+        label {
+            @include all_components;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.3em;
+            span {
+                font-size: map.get(v.$fontsizes, 'small');
+            }
+            &:not(:last-child) {
+                margin-bottom: 0.5em;
+            }
+            &:hover {
+                background-color: lighten(v.$main_color, 65%);
+            }
+        }
+    }
+
+    &:hover {
+        i {
+            color: v.$accent_color_2;
+        }
+        .sort_content {
+            display: block;
+          
+        }
+    }
+}
